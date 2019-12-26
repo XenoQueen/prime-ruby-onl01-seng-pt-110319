@@ -1,10 +1,13 @@
-def prime?(number)
-  start = 2
-  if number > 1
-    range = (start..number-1).to_a
-    range.none? do |num_to_test| 
-    end
-  else
-    false
+def prime?(n)
+  if n <= 1
+    return false
   end
+  i = 2
+  while i < n
+    if n % i == 0
+      return false
+    end
+    i+=1
+  end
+  true
 end
